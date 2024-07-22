@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustomerService implements IService<Customer, Integer> {
+public class CustomerService implements ICustomerService<Customer, Integer> {
 
     private final ICustomerRepository customerRepository;
 
@@ -36,5 +36,10 @@ public class CustomerService implements IService<Customer, Integer> {
     @Override
     public void deleteById(Integer integer) {
         customerRepository.deleteById(integer);
+    }
+
+    @Override
+    public List<Customer> findAlls() {
+        return customerRepository.findAll();
     }
 }
