@@ -32,7 +32,7 @@ class CustomerServiceTest {
     @Test
     @Order(2)
     void findById() {
-        Optional<Customer> customer = customerService.findById(25);
+        Optional<Customer> customer = customerService.findById(1);
         assertTrue(customer.isPresent());
         System.out.println(customer);
     }

@@ -7,5 +7,5 @@ import za.ac.cput.gameshop_2.domain.Customer;
 @Repository
 public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
 
-    Customer findCustomerById(Integer id);
+    //Customer findCustomerById(Integer id);
 }
